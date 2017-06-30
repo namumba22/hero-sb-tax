@@ -35,21 +35,20 @@ public class Tax {
 
 
     @Autowired
-    private MultipleDevideClient multipleDevideService;
+    private MultipleDevideClient multipleDevideClient;
 
     @Autowired
     private RounderClient rounderClient;
 
     @RequestMapping(value = "/tax", method = RequestMethod.GET)
     public double getTax() {
-//        return multipleDevideService.devideAndGet(20, 99.5);
-        return rounderClient.round(multipleDevideService.devideAndGet(20, 99.5));
+        return rounderClient.round(multipleDevideClient.devideAndGet(20, 99.5));
 //        return 12.11;
     }
 
     @RequestMapping(value = "/tax/{amount:.+}", method = RequestMethod.GET)
     public double getTaxByAmount(@PathVariable final double amount) {
-        return rounderClient.round(multipleDevideService.devideAndGet(amount, 20.5));
+        return rounderClient.round(multipleDevideClient.devideAndGet(amount, 20.5));
     }
 
 }
