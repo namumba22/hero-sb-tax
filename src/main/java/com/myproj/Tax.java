@@ -45,8 +45,8 @@ public class Tax {
 
     @RequestMapping(value = "/tax", method = RequestMethod.GET)
     public double getTax() {
-        return rounderClient.round(multipleDevideClient.devideAndGet(20, 99.5));
-//        return 12.11;
+//        return rounderClient.round(multipleDevideClient.devideAndGet(20, 99.5));
+        return rounderClient.round(123.22999);
     }
 
     @RequestMapping(value = "/tax/{amount:.+}", method = RequestMethod.GET)
