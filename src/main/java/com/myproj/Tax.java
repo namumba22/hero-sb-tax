@@ -21,8 +21,7 @@ import org.springframework.web.bind.annotation.*;
 @SpringBootApplication
 @EnableEurekaClient
 @EnableFeignClients
-@EnableCircuitBreaker
-
+//@EnableCircuitBreaker
 @ComponentScan(basePackages = {"com.myproj"})
 @PropertySource("classpath:tax.properties")
 @RestController

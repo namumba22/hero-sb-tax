@@ -13,9 +13,9 @@ public interface RounderClient {
 
     //TODO: replace with SPEL
     @RequestMapping(value = "${tax.round-url}", method = RequestMethod.GET)
-    @HystrixCommand(fallbackMethod = "defaultRound",commandProperties = {
-            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "9000")
-    })
+//    @HystrixCommand(fallbackMethod = "defaultRound",commandProperties = {
+//            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "9000")
+//    })
     double round(@PathVariable("amount") final double amount);
 
     default double defaultRound(final double amount) {

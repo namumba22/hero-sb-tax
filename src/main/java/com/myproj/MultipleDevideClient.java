@@ -12,9 +12,9 @@ public interface MultipleDevideClient {
 
     @RequestMapping(value = "${tax.devide-and-get-url}", method = RequestMethod.GET)
     //TODO: replace with SPEL
-    @HystrixCommand(fallbackMethod = "defaultRound",commandProperties = {
-            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "9000")
-    })
+//    @HystrixCommand(fallbackMethod = "defaultRound",commandProperties = {
+//            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "9000")
+//    })
     double devideAndGet(@PathVariable("amount") final double amount,
                         @PathVariable("amount2") final double amount2);
 
