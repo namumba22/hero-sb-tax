@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.*;
 @EnableAutoConfiguration
 @SpringBootApplication
 @EnableEurekaClient
+@EnableFeignClients
 @ComponentScan(basePackages = {"com.myproj"})
 @PropertySource("classpath:tax.properties")
 @RestController
